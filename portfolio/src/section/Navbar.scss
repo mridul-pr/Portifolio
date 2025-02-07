@@ -1,0 +1,45 @@
+@use "../assets/_colors" as *;
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  position: fixed;
+  top: 0px;
+
+  .left-section {
+    display: flex;
+    margin-left: 100px;
+
+    h1 {
+      font-weight: 200;
+      font-family: "Manrope", serif;
+    }
+    .second-name {
+      color: $gold-color;
+    }
+  }
+
+  .right-section {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    list-style: none;
+    margin-right: 50px;
+    align-items: center;
+
+    a {
+      text-decoration: none;
+      color: $text-color;
+    }
+
+    .button {
+      padding: 15px;
+      background-color: $gold-color;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+  }
+}

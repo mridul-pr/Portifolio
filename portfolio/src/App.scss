@@ -1,0 +1,53 @@
+@use "./assets/colors" as *;
+@import url("https://fonts.googleapis.com/css2?family=Coming+Soon&family=Manrope:wght@200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "Manrope", serif;
+  background-color: $background-color;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+
+  /* Custom Scrollbar */
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #ffff0030, #d9ff0045);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #d4ff00, #000000);
+  }
+}
+
+.custom-cursor {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: linear-gradient(45deg, #ffea00, #d4ff00);
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0); /* Start hidden */
+  transition: transform 0.1s ease-out, background 0.3s ease;
+  mix-blend-mode: difference;
+  z-index: 9999;
+}
+
+body {
+  cursor: none; // Hide default cursor
+}

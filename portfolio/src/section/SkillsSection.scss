@@ -1,0 +1,95 @@
+.skills-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #101010;
+  color: white;
+  padding: 50px 20px;
+  text-align: center;
+
+  .skills-title {
+    font-size: clamp(4rem, 10vw, 10rem); // Responsive font size
+    font-weight: bold;
+    opacity: 0.1;
+    user-select: none;
+    margin-bottom: 30px;
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(120px, 1fr)
+    ); // Auto-responsive
+    gap: 20px;
+    max-width: 800px;
+    width: 100%;
+    justify-content: center;
+    padding: 0 20px;
+  }
+
+  .skill-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: #222;
+    border: 2px solid #444;
+    border-radius: 10px;
+    font-size: clamp(1rem, 2vw, 1.2rem); // Scales with screen size
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    .icon {
+      font-size: clamp(2rem, 3vw, 2.5rem); // Adjust icon size dynamically
+      margin-bottom: 10px;
+    }
+  }
+
+  // Responsive Design
+  @media (max-width: 1024px) {
+    .skills-grid {
+      grid-template-columns: repeat(2, 1fr); // 2 columns on tablets
+    }
+  }
+
+  @media (max-width: 768px) {
+    .skills-grid {
+      grid-template-columns: repeat(
+        2,
+        1fr
+      ); // Keeps 2 columns on smaller tablets
+      gap: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 10px 5px;
+    width: 100%;
+
+    .skills-title {
+      font-size: 3rem;
+    }
+
+    .skills-grid {
+      grid-template-columns: repeat(1, 1fr); // 1 column on mobile
+      gap: 10px;
+      width: 200px;
+    }
+
+    .skill-card {
+      padding: 10px;
+      width: 300px;
+    }
+  }
+}
