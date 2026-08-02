@@ -1,0 +1,79 @@
+@use "../../assets/_colors" as *;
+
+.toolbox {
+  &__categories {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+  }
+
+  &__category-label {
+    font-family: $font-mono;
+    font-size: 12.5px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: $text-tertiary;
+    margin-bottom: 16px;
+  }
+
+  &__chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  &__chip {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 18px;
+    background: $bg-elevated;
+    border: 1px solid $border;
+    border-radius: $radius-full;
+    cursor: default;
+    overflow: hidden;
+    transition: border-color 0.3s $ease-out, background 0.3s $ease-out, padding-right 0.3s $ease-out;
+
+    &-icon {
+      font-size: 16px;
+      color: $accent;
+      display: flex;
+      flex-shrink: 0;
+    }
+
+    &-name {
+      font-size: 14px;
+      font-weight: 500;
+      color: $text-primary;
+      white-space: nowrap;
+    }
+
+    &-note {
+      font-size: 12.5px;
+      color: $text-tertiary;
+      max-width: 0;
+      opacity: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      transition: max-width 0.35s $ease-out, opacity 0.25s $ease-out;
+    }
+
+    &:hover {
+      border-color: $accent-dim;
+      background: $bg-elevated-2;
+
+      .toolbox__chip-note {
+        max-width: 260px;
+        opacity: 1;
+        margin-left: 2px;
+        padding-left: 10px;
+        border-left: 1px solid $border-hover;
+      }
+    }
+
+    @media (max-width: 640px) {
+      &-note { display: none; }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+@use "../../assets/_colors" as *;
+
+.about {
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    @media (max-width: 720px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__card {
+    background: $bg-elevated;
+    border: 1px solid $border;
+    border-radius: $radius-lg;
+    padding: 32px;
+    transition: transform 0.3s $ease-out, border-color 0.3s $ease-out, box-shadow 0.3s $ease-out;
+
+    &:hover {
+      transform: translateY(-4px);
+      border-color: $border-hover;
+      box-shadow: $shadow-md;
+    }
+
+    &-icon {
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: $radius-md;
+      background: $accent-soft;
+      color: $accent;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      font-size: 18px;
+      color: $text-primary;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 14.5px;
+      line-height: 1.65;
+      color: $text-secondary;
+    }
+  }
+}

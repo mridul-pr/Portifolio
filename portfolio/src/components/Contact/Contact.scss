@@ -1,0 +1,52 @@
+@use "../../assets/_colors" as *;
+
+.contact {
+  &__inner {
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__headline {
+    font-size: clamp(28px, 4.5vw, 44px);
+    color: $text-primary;
+    margin-bottom: 36px;
+  }
+
+  &__cta {
+    margin-bottom: 56px;
+  }
+
+  &__links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    border-top: 1px solid $border;
+    padding-top: 36px;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 18px;
+    font-size: 13.5px;
+    color: $text-secondary;
+    border: 1px solid $border;
+    border-radius: $radius-full;
+    transition: color 0.2s $ease-out, border-color 0.2s $ease-out, transform 0.2s $ease-out;
+
+    span {
+      color: $accent;
+      display: flex;
+      font-size: 14px;
+    }
+
+    &:hover {
+      color: $text-primary;
+      border-color: $border-hover;
+      transform: translateY(-2px);
+    }
+  }
+}

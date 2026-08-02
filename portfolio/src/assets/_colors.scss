@@ -1,3 +1,89 @@
-$background-color: #101010;
-$text-color: #fff;
-$gold-color: #ffd700;
+// ============================================
+// DESIGN TOKENS — Mridul Pramod Portfolio
+// Direction: "commit log" — a frontend engineer's
+// version history, told in git/changelog language.
+// ============================================
+
+// ---- Surface ----
+$bg: #0a0c10; // base canvas, near-black graphite w/ blue cast
+$bg-elevated: #12151b; // cards, panels
+$bg-elevated-2: #181c24; // hover / nested panels
+$border: #23272f;
+$border-hover: #343a45;
+
+// ---- Text ----
+$text-primary: #eceef1;
+$text-secondary: #9099a6;
+$text-tertiary: #5b626f;
+
+// ---- Accent ----
+// Amber = "promotion / level-up" (ties to resume's Intern -> Junior arc)
+$accent: #e8a33d;
+$accent-soft: rgba(232, 163, 61, 0.12);
+$accent-dim: #b9832f;
+
+// Teal = tech / data, used sparingly for links, tags, code
+$teal: #4fd1c5;
+$teal-soft: rgba(79, 209, 197, 0.12);
+
+// Status
+$status-live: #56d364;
+
+// ---- Gradients ----
+$gradient-bg: radial-gradient(
+  60% 50% at 50% 0%,
+  rgba(232, 163, 61, 0.08) 0%,
+  rgba(10, 12, 16, 0) 60%
+);
+$gradient-accent: linear-gradient(135deg, $accent 0%, $teal 130%);
+$gradient-card: linear-gradient(
+  180deg,
+  rgba(255, 255, 255, 0.03) 0%,
+  rgba(255, 255, 255, 0) 100%
+);
+
+// ---- Typography ----
+$font-display: "Space Grotesk", "Inter", sans-serif;
+$font-body:
+  "Inter",
+  -apple-system,
+  sans-serif;
+$font-mono: "JetBrains Mono", "IBM Plex Mono", monospace;
+
+// ---- Spacing scale ----
+$space-1: 4px;
+$space-2: 8px;
+$space-3: 12px;
+$space-4: 16px;
+$space-5: 24px;
+$space-6: 32px;
+$space-7: 48px;
+$space-8: 64px;
+$space-9: 96px;
+$space-10: 128px;
+
+// ---- Radius ----
+$radius-sm: 6px;
+$radius-md: 12px;
+$radius-lg: 20px;
+$radius-full: 999px;
+
+// ---- Layout ----
+$max-width: 1160px;
+$section-padding: clamp(64px, 10vw, 128px);
+
+// ---- Motion ----
+$ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+$ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+
+// ---- Shadows ----
+$shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+$shadow-md: 0 8px 24px rgba(0, 0, 0, 0.35);
+$shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.45);
+$shadow-accent:
+  0 0 0 1px rgba(232, 163, 61, 0.3),
+  0 8px 30px rgba(232, 163, 61, 0.15);
+
+// legacy aliases (kept so old components relying on prior variable names still compile)
+$text-color: $text-primary;
+$gold-color: $accent;

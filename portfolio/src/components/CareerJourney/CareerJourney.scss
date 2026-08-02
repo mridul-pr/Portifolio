@@ -1,0 +1,126 @@
+@use "../../assets/_colors" as *;
+
+.journey {
+  &__log {
+    background: $bg-elevated;
+    border: 1px solid $border;
+    border-radius: $radius-lg;
+    overflow: hidden;
+  }
+
+  &__log-header {
+    padding: 16px 24px;
+    border-bottom: 1px solid $border;
+    font-family: $font-mono;
+    font-size: 13px;
+    color: $text-tertiary;
+  }
+
+  &__list {
+    padding: 12px 24px 28px;
+  }
+
+  &__entry {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__rail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 26px;
+  }
+
+  &__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: $text-tertiary;
+    border: 2px solid $bg-elevated;
+    box-shadow: 0 0 0 2px $border;
+    flex-shrink: 0;
+
+    &.is-current {
+      background: $accent;
+      box-shadow: 0 0 0 2px $accent-soft, 0 0 0 5px rgba(232, 163, 61, 0.15);
+      animation: glow 2s ease-in-out infinite;
+    }
+  }
+
+  @keyframes glow {
+    0%, 100% { box-shadow: 0 0 0 2px $accent-soft, 0 0 0 5px rgba(232, 163, 61, 0.15); }
+    50% { box-shadow: 0 0 0 2px $accent-soft, 0 0 0 8px rgba(232, 163, 61, 0.25); }
+  }
+
+  &__line {
+    width: 1px;
+    flex: 1;
+    background: $border;
+    margin: 4px 0;
+  }
+
+  &__entry:last-child &__line {
+    display: none;
+  }
+
+  &__body {
+    padding: 20px 0 32px;
+    flex: 1;
+  }
+
+  &__meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+
+  &__tag {
+    font-family: $font-mono;
+    font-size: 12.5px;
+    font-weight: 500;
+    color: $teal;
+    background: $teal-soft;
+    padding: 2px 8px;
+    border-radius: $radius-sm;
+  }
+
+  &__date {
+    font-family: $font-mono;
+    font-size: 12.5px;
+    color: $text-tertiary;
+  }
+
+  &__badge {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $status-live;
+    border: 1px solid rgba(86, 211, 100, 0.3);
+    padding: 2px 8px;
+    border-radius: $radius-full;
+  }
+
+  &__title {
+    font-size: 18px;
+    color: $text-primary;
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+
+  &__detail {
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: $text-secondary;
+    max-width: 520px;
+  }
+
+  @media (max-width: 640px) {
+    &__log-header { font-size: 12px; padding: 14px 16px; }
+    &__list { padding: 8px 16px 20px; }
+    &__entry { gap: 14px; }
+    &__detail { max-width: 100%; }
+  }
+}

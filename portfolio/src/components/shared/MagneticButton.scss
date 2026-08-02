@@ -1,0 +1,54 @@
+@use "../../assets/_colors" as *;
+
+.magnetic-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: $radius-full;
+  font-family: $font-body;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: -0.01em;
+  transition: box-shadow 0.3s $ease-out, background 0.3s $ease-out, border-color 0.3s $ease-out;
+
+  span {
+    position: relative;
+    z-index: 1;
+  }
+
+  &--primary {
+    background: $text-primary;
+    color: $bg;
+
+    &:hover {
+      box-shadow: $shadow-accent;
+    }
+  }
+
+  &--secondary {
+    background: transparent;
+    color: $text-primary;
+    border: 1px solid $border-hover;
+
+    &:hover {
+      border-color: $accent;
+      background: $accent-soft;
+    }
+  }
+
+  &--ghost {
+    background: $bg-elevated;
+    color: $text-secondary;
+    border: 1px solid $border;
+    font-family: $font-mono;
+    font-size: 13px;
+
+    &:hover {
+      color: $text-primary;
+      border-color: $border-hover;
+    }
+  }
+}

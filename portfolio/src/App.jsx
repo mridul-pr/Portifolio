@@ -1,71 +1,32 @@
-import { useEffect } from "react";
-import gsap from "gsap";
+import React from "react";
+import Navbar from "./components/Navbar/Navbar";
+import Hero from "./components/Hero/Hero";
+import CareerJourney from "./components/CareerJourney/CareerJourney";
+import About from "./components/About/About";
+import Toolbox from "./components/Toolbox/Toolbox";
+import Projects from "./components/Projects/Projects";
+import Experience from "./components/Experience/Experience";
+import Resume from "./components/Resume/Resume";
+import Contact from "./components/Contact/Contact";
+import Footer from "./components/Footer/Footer";
 import "./App.scss";
-import About from "./section/About";
-import Contact from "./section/Contact";
-import Experience from "./section/Experience";
-import HeroSection from "./section/HeroSection";
-import Navbar from "./section/Navbar";
-import SkillsSection from "./section/SkillsSection";
 
 function App() {
-  useEffect(() => {
-    const cursor = document.querySelector(".custom-cursor");
-
-    if (!cursor) return;
-
-    // Instantly position the cursor at the mouse position
-    const updateCursor = (e) => {
-      gsap.to(cursor, {
-        x: e.clientX,
-        y: e.clientY,
-        scale: 1, // Make cursor visible
-        duration: 0,
-        ease: "power2.out",
-      });
-    };
-
-    document.addEventListener("mousemove", updateCursor);
-
-    // Cursor hover effects
-    document.querySelectorAll("a, button").forEach((el) => {
-      el.addEventListener("mouseenter", () => {
-        gsap.to(cursor, { scale: 2, background: "#ff0000" });
-      });
-      el.addEventListener("mouseleave", () => {
-        gsap.to(cursor, {
-          scale: 1,
-          background: "linear-gradient(45deg, #ffea00, #d4ff00)",
-        });
-      });
-    });
-
-    return () => {
-      document.removeEventListener("mousemove", updateCursor);
-    };
-  }, []);
-
   return (
-    <main className="app">
-      <div className="custom-cursor"></div>
+    <>
       <Navbar />
-      <HeroSection />
-      <div id="about">
+      <main>
+        <Hero />
+        <CareerJourney />
         <About />
-      </div>
-      <div id="skills">
-        <SkillsSection />
-      </div>
-      <div id="experience">
+        <Toolbox />
+        <Projects />
         <Experience />
-      </div>
-      <div id="contact">
+        <Resume />
         <Contact />
-      </div>
-      <footer className="footer">
-        <p>© {new Date().getFullYear()} Mridul Pramod. All rights reserved.</p>
-      </footer>
-    </main>
+      </main>
+      <Footer />
+    </>
   );
 }
 
