@@ -7,26 +7,28 @@ Use this alongside the live Privacy Policy:
 - App: Skyward Airport Tycoon
 - Developer: Mridul Pramod
 - Contact: `mridulpramod8@gmail.com`
-- Policy version: 1.1 (effective 30 October 2026)
+- Policy version: 1.2 (effective 30 October 2026)
 
-> **Current release status:** the App does **not** yet include the Google Mobile
-> Ads SDK and does **not** show third-party ads. Answer the ads declaration as
-> **No** for a build without ads. Switch to **Yes** only when the production
-> release actually contains AdMob. The Data safety answers below describe the
-> release once AdMob is integrated.
+> **Current release status:** the App includes the Google Mobile Ads SDK
+> through its Capacitor plugin (version 8.2.1) and Google UMP consent
+> management. It uses rewarded video ads and a 500-coin rewarded ad feature.
+> Advertising is currently limited to **Google test ad units**; real advertiser
+> ads have not been enabled. Do not describe real ads as live or the app as
+> monetised while only test ads are configured.
 
-### Current build vs production build
+### Current test build vs production build
 
-| Play Console item | Current build (no AdMob) | Production build with AdMob |
+| Play Console item | Current test build (SDK + test ads) | Production build with real ads |
 | --- | --- | --- |
-| Ads declaration | **No** | **Yes** |
-| Data safety — collection | **No required data types collected or shared** | Approximate location, App interactions, Diagnostics, Device or other IDs |
-| Data safety — encryption in transit | Not applicable if nothing is collected | **Yes** |
-| Data safety — deletion request | Answer according to the flow you offer | **Yes**, using the policy URL/contact (section 4) |
+| Ads declaration | **Yes** if this build is distributed and shows ads, including test ads; otherwise complete it before the production release | **Yes** |
+| Data safety — collection | Approximate location, App interactions, Diagnostics, Device or other IDs | Same four data types |
+| Data safety — encryption in transit | **Yes** | **Yes** |
+| Data safety — deletion request | **Yes**, using the policy URL/contact (section 4) | **Yes** |
 | Privacy policy URL | Required | Required |
 
-Do not leave the current build's "no collection" answers in place after AdMob is
-added, and do not publish the AdMob build with the old ads declaration.
+A **Yes** ads declaration means the app contains advertising functionality. It
+does not mean real advertiser ads are live. Keep the store listing and policy
+clear that only test ads are configured until production ad units are enabled.
 
 Google references:
 
@@ -47,19 +49,22 @@ Play Console → **App content** → **Ads**.
 
 | Release state | Answer |
 | --- | --- |
-| Current build, no AdMob SDK, no ads | **No, my app does not contain ads** |
-| Production build that contains AdMob or any other ad SDK | **Yes, my app contains ads** |
+| Current test build with SDK and Google test ads | **Yes**, if the build is distributed and shows ads; make clear in the listing that only test ads are configured |
+| Production build with real ads | **Yes, my app contains ads** |
+| Build with no ad SDK and no ads | **No, my app does not contain ads** |
 
 Notes:
 
-- Answer **Yes** even if ads are limited to test ads, rewarded ads, banners, or
-  interstitials.
+- Answer **Yes** for any build that displays ads, including test ads, rewarded
+  ads, banners, or interstitials.
+- A **Yes** answer does not mean real advertiser ads are live. Do not claim real
+  ads are active or that the app is monetised while test ad units are in use.
 - An inaccurate ads declaration is a policy misrepresentation and can lead to
   enforcement, including suspension.
 - If you add or remove advertising later, update this declaration with the
   release.
 - The store listing should not describe the app as ad-free if the release
-  contains ads.
+  contains advertising functionality.
 
 ---
 
@@ -67,9 +72,11 @@ Notes:
 
 Play Console → **App content** → **Data safety**.
 
-For a release that contains the Google Mobile Ads SDK (AdMob), use the
-following. The SDK collects data automatically; the developer does not need to
-write custom code for these categories.
+The App currently contains the Google Mobile Ads SDK (Capacitor plugin
+version 8.2.1) and uses Google test ad units. The SDK collects data
+automatically; the developer does not need to write custom code for these
+categories. Test ads can still initialize the SDK and transmit data, so declare
+these types for the test build as well.
 
 | Play data type | Collected | Shared | Purposes | Optional? | Processed ephemerally? |
 | --- | --- | --- | --- | --- | --- |
@@ -111,7 +118,7 @@ write custom code for these categories.
 
 | Section | Answer for this app |
 | --- | --- |
-| Does your app collect or share any of the required user data types? | **Yes**, once AdMob is included |
+| Does your app collect or share any of the required user data types? | **Yes** |
 | Is all of the user data collected by your app encrypted in transit? | **Yes** |
 | Do you provide a way for users to request that their data is deleted? | **Yes** — use the policy URL/contact (see section 4) |
 | Does your app collect data for advertising or marketing? | **Yes** |
@@ -203,18 +210,21 @@ Play Console → **App content** → **Target audience and content**.
 
 ## 6. Before enabling production ads — checklist
 
-- [ ] AdMob account and app are set up; production ad unit IDs are used.
-- [ ] Google Mobile Ads SDK is added to the release build.
+- [ ] AdMob account and app are set up.
+- [ ] Production ad unit IDs replace the current Google test ad unit IDs.
+- [ ] Google Mobile Ads SDK is integrated through Capacitor plugin 8.2.1.
 - [ ] UMP consent flow is implemented and tested in EEA, UK, and Switzerland.
 - [ ] Consent choices are honoured before ads are requested.
+- [ ] Rewarded video ads and the 500-coin reward are tested end-to-end.
 - [ ] Android advertising ID permissions and manifest entries are correct.
 - [ ] Privacy Policy URL in Play Console is
       `https://portifolio-mridul-ps-projects.vercel.app/skyward-airport-tycoon/privacy-policy`.
-- [ ] Policy Section 3 is updated with the actual SDK version, ad formats, and
-      any mediation partners.
+- [ ] Policy Section 3 is updated with the production ad unit details, SDK
+      version, ad formats, and any mediation partners.
 - [ ] Policy Section 6 matches the consent tool and opt-out controls actually
       shipped.
-- [ ] Ads declaration is set to **Yes**.
+- [ ] Policy notice is updated so it no longer says only test ads are in use.
+- [ ] Ads declaration reflects the release that is actually distributed.
 - [ ] Data safety answers match the release build.
 - [ ] Target audience and content rating are complete and accurate.
 - [ ] Store listing does not contradict the policy or the ads declaration.

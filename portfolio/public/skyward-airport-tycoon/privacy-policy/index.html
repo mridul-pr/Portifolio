@@ -7,20 +7,21 @@
     <meta name="theme-color" content="#0a0c10" />
     <meta
       name="description"
-      content="Privacy Policy for Skyward Airport Tycoon, an Android game by Mridul Pramod. Learn what is stored on your device and how Google's Mobile Ads SDK will collect and share data when advertising is enabled, for advertising, analytics and fraud prevention."
+      content="Privacy Policy for Skyward Airport Tycoon, an Android game by Mridul Pramod. Learn what is stored on your device and how the integrated Google Mobile Ads SDK collects and shares data for test advertising, analytics and fraud prevention."
     />
     <meta name="robots" content="index, follow" />
     <title>Privacy Policy — Skyward Airport Tycoon</title>
 
     <!--
-      UPDATE CHECKLIST — when AdMob or another SDK is integrated:
-      1. Replace the "Pre-launch disclosure — ads not yet active" notice.
-      2. Update Section 3 with the actual SDK/version, ad formats, and data collected.
-      3. Update Section 5 with every third-party ad partner.
-      4. Update Section 6 with the consent tool and opt-out controls actually used.
+      UPDATE CHECKLIST — the Google Mobile Ads SDK is integrated (Capacitor
+      plugin 8.2.1) and currently limited to Google test ad units:
+      1. Keep the "Test advertising" notice accurate until real ads are enabled.
+      2. Update Section 3 with the production SDK version, ad formats, and data.
+      3. Update Section 5 with every third-party ad partner or mediation network.
+      4. Update Section 6 with the final UMP consent and opt-out configuration.
       5. Bump the effective date and version in the hero.
-      6. Update Google Play Console:
-         - App content > Ads declaration ("Contains ads")
+      6. Before real ads go live, update Google Play Console:
+         - App content > Ads declaration
          - App content > Data safety (types, sharing, purposes, security)
          - Privacy policy URL
          - Content rating and target audience, if applicable
@@ -847,16 +848,17 @@
         <p class="hero__app">Skyward Airport Tycoon</p>
         <p class="hero__summary">
           This policy explains what information the Android game
-          <strong>Skyward Airport Tycoon</strong> stores on your device, what
-          information Google's Mobile Ads SDK collects and shares when
-          advertising is enabled, and the choices available to you.
+          <strong>Skyward Airport Tycoon</strong> stores on your device, how the
+          integrated Google Mobile Ads SDK and Google UMP handle information
+          while advertising is being tested with Google test ads, and the choices
+          available to you.
         </p>
 
         <div class="meta" aria-label="Policy details">
           <span class="meta__item"><span class="meta__dot"></span> Android</span>
           <span class="meta__item">Developer: <strong>Mridul Pramod</strong></span>
           <span class="meta__item">Effective: <strong>30 October 2026</strong></span>
-          <span class="meta__item">Version <strong>1.1</strong></span>
+          <span class="meta__item">Version <strong>1.3</strong></span>
         </div>
       </div>
 
@@ -880,21 +882,22 @@
 
         <article class="policy">
           <div class="notice" role="note">
-            <span class="notice__label">Pre-launch disclosure — ads not yet active</span>
+            <span class="notice__label">Test advertising — Google AdMob + UMP</span>
             <p>
-              <strong>This policy has been updated in preparation for Google
-              AdMob, but advertising is not active yet.</strong> As of the
-              effective date, Skyward Airport Tycoon does not display
-              third-party advertising and does not contain the Google Mobile
-              Ads SDK.
+              <strong>The App now includes the Google Mobile Ads SDK through its
+              Capacitor plugin, version 8.2.1, together with Google's User
+              Messaging Platform (UMP) consent tool.</strong> Advertising is
+              currently being tested using Google test ad units. Real advertiser
+              ads have not been enabled. Ad availability is not guaranteed.
             </p>
             <p>
-              The advertising sections below already describe the data that
-              Google's Mobile Ads SDK collects and shares automatically. This
-              lets the policy and the Google Play listing be reviewed before
-              ads are enabled. When advertising goes live, the SDK version, ad
-              formats, consent flow and Play Console declarations will be
-              checked again and this page updated if needed.
+              The App offers optional rewarded video ads. A rewarded ad that
+              completes successfully awards <strong>500 in-game coins</strong>,
+              credited to the local coin balance. At app launch, UMP refreshes
+              consent information. Required consent messages are displayed, and
+              the App requests ads only when UMP permits. When required,
+              <strong>Privacy Options</strong> are available in the
+              <strong>More</strong> section to review or change your choices.
             </p>
           </div>
 
@@ -904,9 +907,9 @@
               Skyward Airport Tycoon (the “App”) is an Android game developed by
               Mridul Pramod (the “Developer”, “we”, “us”, or “our”). This Privacy
               Policy explains how the App handles information, including
-              information stored locally on your device and information that may
-              be collected by third-party advertising services when advertising
-              is introduced.
+              information stored locally on your device and information collected
+              by the Google Mobile Ads SDK and Google's consent services included
+              in the App.
             </p>
             <p>
               By installing or using the App, you acknowledge the practices
@@ -929,15 +932,17 @@
             </p>
             <ul>
               <li>Game progress, such as unlocked content, upgrades, levels, and in-game achievements</li>
+              <li>In-game currency balances, including coins earned through the rewarded advertisement feature</li>
               <li>Game settings and preferences, such as sound, music, and display options</li>
               <li>Local gameplay state needed to resume a session</li>
               <li>Technical information stored by the App on the device, such as the app version</li>
             </ul>
             <p>
               This information is stored on your device and is not transmitted
-              to a server operated by the Developer. The App does not currently
-              provide user accounts, login, cloud saves, analytics, or payment
-              functionality.
+              to a server operated by the Developer. The App does not provide
+              user accounts, login, cloud saves, or payment functionality.
+              Advertising-related analytics are performed by Google through the
+              Mobile Ads SDK as described in Sections 3 and 4.
             </p>
             <p>
               You can remove locally stored information by clearing the App's
@@ -950,23 +955,27 @@
           <section id="advertising">
             <h2><span class="num">03</span> Advertising and Google AdMob</h2>
             <p>
-              <strong>Current status:</strong> advertising is planned, but Google
-              AdMob has not yet been integrated into the App. The App does not
-              currently contain the Google Mobile Ads SDK and does not currently
-              show third-party ads.
+              <strong>Current status:</strong> the App includes the Google Mobile
+              Ads SDK through its Capacitor plugin, version 8.2.1, and uses
+              Google's User Messaging Platform (UMP) for consent management.
+              Advertising is currently limited to Google test ad units. Real
+              advertising has not been enabled. At app launch, UMP refreshes
+              consent information, required consent messages are displayed, and
+              the App requests ads only when UMP permits. Ad availability is not
+              guaranteed.
             </p>
             <p>
               Google's current Play data disclosure for the Google Mobile Ads SDK
-              states that the SDK automatically <strong>collects and shares</strong>
-              the following information for <strong>advertising, analytics, and
-              fraud prevention</strong>. When AdMob is integrated, these
-              practices will apply to the App unless a different configuration is
-              documented here.
+              states that the SDK may automatically <strong>collect and
+              share</strong> the following information for <strong>advertising,
+              analytics, and fraud prevention</strong>. These practices apply to
+              the integrated SDK, including the current test configuration,
+              unless a different configuration is documented here.
             </p>
 
             <div class="table-wrap" role="region" aria-label="Google Mobile Ads SDK data categories" tabindex="0">
               <table class="data-table">
-                <caption>Data collected and shared automatically by the SDK</caption>
+                <caption>Data the SDK may collect and share automatically</caption>
                 <thead>
                   <tr>
                     <th scope="col">Data category</th>
@@ -1013,6 +1022,22 @@
             </div>
 
             <p>
+              <strong>Ad format and reward:</strong> the App offers optional
+              rewarded video ads. A rewarded ad that completes successfully
+              awards <strong>500 in-game coins</strong>. When the reward is
+              earned, the App credits it to the local coin balance stored on your
+              device. The reward is credited only after the ad is completed
+              successfully.
+            </p>
+            <p>
+              <strong>Ad availability is not guaranteed.</strong> Ads may fail to
+              load, be unavailable in your region, or be limited by consent
+              choices, network conditions, ad inventory, or Google's systems. If
+              no rewarded ad is available or the ad does not complete
+              successfully, no reward is granted. During testing, the video is a
+              Google test ad, not a real advertiser ad.
+            </p>
+            <p>
               These collection and sharing activities are performed by Google's
               advertising SDK, not by a server operated by the Developer. The
               Developer does not receive this data into a developer-operated
@@ -1037,10 +1062,11 @@
             </p>
             <div class="note">
               <p>
-                <strong>Update note:</strong> when advertising is integrated,
-                this section will be revised to describe the actual SDK version,
-                the ad formats implemented, the consent tool used, and any
-                additional third-party ad partners or mediation networks.
+                <strong>Test configuration:</strong> only Google test ad units
+                are configured. When real advertising is enabled, this section
+                will be updated with the production ad unit details, any
+                mediation or third-party ad partners, and the final consent
+                configuration.
               </p>
             </div>
           </section>
@@ -1048,24 +1074,25 @@
           <section id="use">
             <h2><span class="num">04</span> How information is used</h2>
             <p>
-              The App uses local information to operate the game. When
-              advertising is enabled, the Google Mobile Ads SDK uses information
-              only for the purposes described below. The Developer and Google act
-              independently: the Developer controls the App and its local data,
-              while Google controls the data its SDK collects and shares.
+              The App uses local information to operate the game. The integrated
+              Google Mobile Ads SDK uses information only for the purposes
+              described below. The Developer and Google act independently: the
+              Developer controls the App and its local data, while Google controls
+              the data its SDK collects and shares.
             </p>
 
             <h3>Processing by the Developer</h3>
             <ul>
               <li>To operate the game and save your progress and settings locally on your device</li>
+              <li>To credit the 500-coin reward after a rewarded ad is completed successfully and save the updated balance locally</li>
               <li>To respond to privacy questions and requests sent to the contact address</li>
               <li>To comply with legal obligations and enforce applicable terms</li>
             </ul>
 
             <h3>Processing by Google through the Mobile Ads SDK</h3>
             <p>
-              When AdMob is integrated, Google states that the SDK collects and
-              shares information for the following purposes:
+              Google states that the integrated SDK may collect and share
+              information for the following purposes:
             </p>
             <ul>
               <li>
@@ -1090,10 +1117,12 @@
             </p>
             <div class="note">
               <p>
-                <strong>Current status:</strong> because the App does not yet
-                contain the SDK, none of the Google processing described above is
-                occurring in the App today. These purposes apply once advertising
-                is enabled.
+                <strong>Test-ad status:</strong> the SDK is active with Google
+                test ad units, and UMP controls whether ad requests are
+                permitted. Real advertiser ads are not being served, but the
+                data practices described in this section apply to the test
+                configuration and will continue to apply when real ads are
+                enabled.
               </p>
             </div>
           </section>
@@ -1101,12 +1130,13 @@
           <section id="sharing">
             <h2><span class="num">05</span> Third-party services and data sharing</h2>
             <p>
-              <strong>Collected and shared with Google.</strong> When advertising
-              is enabled, the Google Mobile Ads SDK automatically collects the
-              information described in Section 3 and shares it with Google and its
+              <strong>Collected and shared with Google.</strong> The integrated
+              Google Mobile Ads SDK automatically collects the information
+              described in Section 3 and shares it with Google and its
               advertising partners for advertising, analytics and fraud
-              prevention. Google acts as an independent third party and processes
-              that information under its own privacy policy:
+              prevention. This applies to the current test configuration as well
+              as to real ads once enabled. Google acts as an independent third
+              party and processes that information under its own privacy policy:
               <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a>.
             </p>
             <p>
@@ -1148,11 +1178,11 @@
             <h2><span class="num">06</span> Advertising personalisation, consent and your choices</h2>
             <p>
               Where required by law, including in the European Economic Area, the
-              United Kingdom and Switzerland, the App will request your consent
-              before personal data is used for personalised advertising. When
-              AdMob is integrated, the App intends to use a Google-compliant
-              consent mechanism, such as Google's User Messaging Platform (UMP)
-              SDK, and will honour the choices you make.
+              United Kingdom and Switzerland, the App uses Google's User
+              Messaging Platform (UMP) consent tool to request your consent before
+              personal data is used for personalised advertising. The App honours
+              the choices you make through its consent message and privacy
+              options.
             </p>
             <p>
               If you consent, ads may be personalised using information such as
@@ -1162,13 +1192,19 @@
               still use limited information for frequency capping, fraud
               prevention, and aggregate measurement.
             </p>
+            <p>
+              Rewarded video ads are optional. If you decline personalised
+              advertising, a rewarded ad may still be available in a
+              non-personalised form. The 500-coin reward is credited only after
+              the rewarded video is completed successfully.
+            </p>
 
             <h3>Controls available to you</h3>
             <ul>
               <li>
                 <strong>In-app consent or privacy settings</strong> — where the
-                App offers a privacy or consent option, you can use it to review
-                or change your advertising choices.
+                App presents a consent message or privacy options, you can use
+                them to review or change your advertising choices.
               </li>
               <li>
                 <strong>Google Ads Settings</strong> — you can manage
@@ -1230,8 +1266,9 @@
               <strong>Advertising data.</strong> Information collected and shared
               by the Google Mobile Ads SDK is retained by Google according to
               Google's own retention policies and your Google account and device
-              settings. The Developer does not control how long Google retains
-              that information. See the
+              settings. This applies to the current test configuration as well as
+              to real ads once enabled. The Developer does not control how long
+              Google retains that information. See the
               <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>
               for details.
             </p>
@@ -1256,7 +1293,8 @@
               information from children.
             </p>
             <p>
-              If advertising is enabled, it will be configured consistently with
+              Advertising is currently limited to Google test ads. If real
+              advertising is enabled, it will be configured consistently with
               applicable child-directed advertising requirements. If the App is
               listed for a child audience or otherwise treated as child-directed,
               the advertising SDK will be configured for child-directed treatment,
@@ -1307,7 +1345,7 @@
               changes are made.
             </p>
             <p>
-              When advertising is enabled, or when the SDK configuration, ad
+              When real advertising is enabled, or when the SDK configuration, ad
               formats, consent flow or third-party partners change, this policy
               and the Google Play declarations will be reviewed together. The Play
               Console ads declaration and Data safety answers will be kept
