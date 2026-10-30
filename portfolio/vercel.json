@@ -1,0 +1,9 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    {
+      "source": "/skyward-airport-tycoon/privacy-policy",
+      "destination": "/skyward-airport-tycoon/privacy-policy/index.html"
+    }
+  ]
+}

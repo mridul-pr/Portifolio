@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#0a0c10" />
+    <meta
+      name="description"
+      content="Privacy Policy for Skyward Airport Tycoon, an Android game by Mridul Pramod. Learn what is stored on your device and how planned Google AdMob advertising will handle data."
+    />
+    <meta name="robots" content="index, follow" />
+    <title>Privacy Policy — Skyward Airport Tycoon</title>
+
+    <!--
+      UPDATE CHECKLIST — when AdMob or another SDK is integrated:
+      1. Replace the "Planned feature — not yet active" notice.
+      2. Update Section 3 with the actual SDK/version, ad formats, and data collected.
+      3. Update Section 5 with every third-party ad partner.
+      4. Update Section 6 with the consent tool and opt-out controls actually used.
+      5. Bump the effective date and version in the hero.
+      6. Re-check the Google Play Data safety form and store listing.
+      Keep this file as the single source of truth for the live policy.
+    -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* ============================================================
+         Design tokens mirrored from src/assets/_colors.scss so this
+         standalone legal page stays visually consistent with the
+         portfolio without changing the React app.
+         ============================================================ */
+      :root {
+        --bg: #0a0c10;
+        --bg-elevated: #12151b;
+        --bg-elevated-2: #181c24;
+        --border: #23272f;
+        --border-hover: #343a45;
+
+        --text-primary: #eceef1;
+        --text-secondary: #9099a6;
+        --text-tertiary: #5b626f;
+
+        --accent: #e8a33d;
+        --accent-soft: rgba(232, 163, 61, 0.12);
+        --accent-dim: #b9832f;
+        --teal: #4fd1c5;
+
+        --font-display: "Space Grotesk", "Inter", sans-serif;
+        --font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+        --font-mono: "JetBrains Mono", "IBM Plex Mono", monospace;
+
+        --radius-sm: 6px;
+        --radius-md: 12px;
+        --radius-lg: 20px;
+        --radius-full: 999px;
+
+        --max-width: 1160px;
+        --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+        --shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.45);
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        -webkit-text-size-adjust: 100%;
+      }
+
+      body {
+        min-height: 100vh;
+        background: var(--bg);
+        background-image: radial-gradient(
+          60% 50% at 50% 0%,
+          rgba(232, 163, 61, 0.08) 0%,
+          rgba(10, 12, 16, 0) 60%
+        );
+        background-attachment: fixed;
+        color: var(--text-primary);
+        font-family: var(--font-body);
+        font-size: 16px;
+        line-height: 1.7;
+        -webkit-font-smoothing: antialiased;
+        overflow-x: hidden;
+      }
+
+      ::selection {
+        background: var(--accent-soft);
+        color: var(--accent);
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      :focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 3px;
+        border-radius: 2px;
+      }
+
+      .skip-link {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        z-index: 20;
+        padding: 10px 16px;
+        background: var(--text-primary);
+        color: var(--bg);
+        border-radius: var(--radius-full);
+        font-size: 13px;
+        font-weight: 600;
+        transform: translateY(-160%);
+        transition: transform 0.2s var(--ease-out);
+      }
+
+      .skip-link:focus {
+        transform: translateY(0);
+      }
+
+      /* ---------- Header ---------- */
+      .site-header {
+        border-bottom: 1px solid var(--border);
+        background: rgba(10, 12, 16, 0.72);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+      }
+
+      .site-header__inner {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 18px 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: baseline;
+        gap: 10px;
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 20px;
+        letter-spacing: -0.02em;
+        color: var(--text-primary);
+      }
+
+      .brand__dot {
+        color: var(--accent);
+      }
+
+      .brand__context {
+        font-family: var(--font-mono);
+        font-size: 11.5px;
+        font-weight: 400;
+        letter-spacing: 0.04em;
+        color: var(--text-tertiary);
+      }
+
+      .header-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-family: var(--font-mono);
+        font-size: 12.5px;
+        color: var(--text-secondary);
+        transition: color 0.2s var(--ease-out);
+      }
+
+      .header-link:hover {
+        color: var(--text-primary);
+      }
+
+      .header-link svg {
+        transition: transform 0.2s var(--ease-out);
+      }
+
+      .header-link:hover svg {
+        transform: translateX(-3px);
+      }
+
+      /* ---------- Page shell ---------- */
+      .page {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 64px 24px 96px;
+      }
+
+      .hero {
+        position: relative;
+        padding-bottom: 44px;
+        border-bottom: 1px solid var(--border);
+        margin-bottom: 56px;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-family: var(--font-mono);
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 18px;
+      }
+
+      .eyebrow::before {
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--accent);
+      }
+
+      .hero h1 {
+        font-family: var(--font-display);
+        font-weight: 600;
+        font-size: clamp(38px, 6vw, 64px);
+        line-height: 1.04;
+        letter-spacing: -0.035em;
+        color: var(--text-primary);
+        margin-bottom: 16px;
+      }
+
+      .hero__app {
+        font-family: var(--font-display);
+        font-size: clamp(18px, 2.6vw, 24px);
+        font-weight: 500;
+        color: var(--text-secondary);
+        letter-spacing: -0.02em;
+        margin-bottom: 24px;
+      }
+
+      .hero__summary {
+        max-width: 700px;
+        font-size: 15.5px;
+        line-height: 1.75;
+        color: var(--text-secondary);
+      }
+
+      .meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 28px;
+      }
+
+      .meta__item {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 7px 13px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius-full);
+        background: var(--bg-elevated);
+        font-family: var(--font-mono);
+        font-size: 11.5px;
+        color: var(--text-secondary);
+        letter-spacing: 0.01em;
+      }
+
+      .meta__item strong {
+        font-weight: 500;
+        color: var(--text-primary);
+      }
+
+      .meta__dot {
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: var(--accent);
+      }
+
+      /* ---------- Layout ---------- */
+      .layout {
+        display: grid;
+        grid-template-columns: 236px minmax(0, 1fr);
+        gap: 64px;
+        align-items: start;
+      }
+
+      .toc {
+        position: sticky;
+        top: 28px;
+      }
+
+      .toc__title {
+        font-family: var(--font-mono);
+        font-size: 11px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--text-tertiary);
+        margin-bottom: 16px;
+      }
+
+      .toc ol {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        border-left: 1px solid var(--border);
+      }
+
+      .toc a {
+        display: flex;
+        gap: 10px;
+        padding: 7px 0 7px 14px;
+        font-size: 13px;
+        line-height: 1.4;
+        color: var(--text-secondary);
+        border-left: 1px solid transparent;
+        margin-left: -1px;
+        transition: color 0.2s var(--ease-out), border-color 0.2s var(--ease-out);
+      }
+
+      .toc a:hover {
+        color: var(--text-primary);
+        border-left-color: var(--border-hover);
+      }
+
+      .toc a span {
+        font-family: var(--font-mono);
+        font-size: 10.5px;
+        color: var(--text-tertiary);
+        padding-top: 1px;
+      }
+
+      /* ---------- Article ---------- */
+      .policy {
+        min-width: 0;
+      }
+
+      .notice {
+        position: relative;
+        padding: 20px 22px 20px 24px;
+        margin-bottom: 40px;
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.03) 0%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        border: 1px solid rgba(232, 163, 61, 0.32);
+        border-left: 3px solid var(--accent);
+        border-radius: var(--radius-md);
+      }
+
+      .notice__label {
+        display: inline-block;
+        font-family: var(--font-mono);
+        font-size: 10.5px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 8px;
+      }
+
+      .notice p {
+        font-size: 13.5px;
+        line-height: 1.65;
+        color: var(--text-secondary);
+      }
+
+      .notice p + p {
+        margin-top: 8px;
+      }
+
+      .notice strong {
+        color: var(--text-primary);
+        font-weight: 600;
+      }
+
+      .policy section {
+        padding-top: 4px;
+        margin-bottom: 48px;
+        scroll-margin-top: 28px;
+      }
+
+      .policy section:last-of-type {
+        margin-bottom: 0;
+      }
+
+      .policy h2 {
+        display: flex;
+        align-items: baseline;
+        gap: 12px;
+        font-family: var(--font-display);
+        font-weight: 600;
+        font-size: clamp(21px, 3vw, 27px);
+        line-height: 1.25;
+        letter-spacing: -0.025em;
+        color: var(--text-primary);
+        margin-bottom: 16px;
+        padding-bottom: 14px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .policy h2 .num {
+        font-family: var(--font-mono);
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 0.02em;
+        color: var(--accent);
+        flex-shrink: 0;
+      }
+
+      .policy h3 {
+        font-family: var(--font-display);
+        font-weight: 600;
+        font-size: 16.5px;
+        line-height: 1.4;
+        letter-spacing: -0.01em;
+        color: var(--text-primary);
+        margin: 26px 0 8px;
+      }
+
+      .policy p {
+        font-size: 15px;
+        line-height: 1.78;
+        color: var(--text-secondary);
+        margin-bottom: 14px;
+      }
+
+      .policy p:last-child {
+        margin-bottom: 0;
+      }
+
+      .policy strong {
+        color: var(--text-primary);
+        font-weight: 600;
+      }
+
+      .policy ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+        margin: 14px 0 16px;
+      }
+
+      .policy li {
+        position: relative;
+        padding-left: 20px;
+        font-size: 14.5px;
+        line-height: 1.65;
+        color: var(--text-secondary);
+      }
+
+      .policy li::before {
+        content: "";
+        position: absolute;
+        left: 2px;
+        top: 10px;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: var(--accent-dim);
+      }
+
+      .policy a:not(.button) {
+        color: var(--teal);
+        text-decoration: underline;
+        text-decoration-color: rgba(79, 209, 197, 0.35);
+        text-underline-offset: 3px;
+        transition: text-decoration-color 0.2s var(--ease-out), color 0.2s var(--ease-out);
+        overflow-wrap: anywhere;
+      }
+
+      .policy a:not(.button):hover {
+        color: #7ce6dc;
+        text-decoration-color: currentColor;
+      }
+
+      .note {
+        padding: 16px 18px;
+        margin: 18px 0;
+        background: var(--bg-elevated);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-sm);
+      }
+
+      .note p {
+        font-size: 13.5px;
+        color: var(--text-secondary);
+        margin: 0;
+      }
+
+      .contact-card {
+        margin-top: 22px;
+        padding: 24px;
+        background: var(--bg-elevated);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+      }
+
+      .contact-card__role {
+        font-family: var(--font-mono);
+        font-size: 10.5px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--text-tertiary);
+        margin-bottom: 6px;
+      }
+
+      .contact-card__name {
+        font-family: var(--font-display);
+        font-size: 20px;
+        font-weight: 600;
+        color: var(--text-primary);
+        letter-spacing: -0.02em;
+      }
+
+      .contact-card__email {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 14px;
+        padding: 10px 16px;
+        border: 1px solid var(--border-hover);
+        border-radius: var(--radius-full);
+        font-family: var(--font-mono);
+        font-size: 12.5px;
+        color: var(--text-primary);
+        background: var(--bg-elevated-2);
+        transition: border-color 0.2s var(--ease-out), background 0.2s var(--ease-out);
+        overflow-wrap: anywhere;
+      }
+
+      .contact-card__email:hover {
+        border-color: var(--accent);
+        background: var(--accent-soft);
+      }
+
+      .contact-card__note {
+        margin-top: 18px;
+        font-size: 13px;
+        line-height: 1.6;
+        color: var(--text-tertiary);
+      }
+
+      /* ---------- Footer ---------- */
+      .site-footer {
+        border-top: 1px solid var(--border);
+        padding: 28px 24px;
+      }
+
+      .site-footer__inner {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10px 24px;
+        font-family: var(--font-mono);
+        font-size: 12px;
+        color: var(--text-tertiary);
+      }
+
+      .site-footer a {
+        color: var(--text-secondary);
+        transition: color 0.2s var(--ease-out);
+      }
+
+      .site-footer a:hover {
+        color: var(--text-primary);
+      }
+
+      /* ---------- Responsive ---------- */
+      @media (max-width: 900px) {
+        .page {
+          padding: 48px 22px 72px;
+        }
+
+        .layout {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+
+        .toc {
+          position: static;
+          padding: 20px;
+          background: var(--bg-elevated);
+          border: 1px solid var(--border);
+          border-radius: var(--radius-md);
+        }
+
+        .toc ol {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 0 20px;
+          border-left: none;
+        }
+
+        .toc a {
+          padding: 6px 0;
+          border-left: none;
+        }
+
+        .toc a:hover {
+          border-left-color: transparent;
+        }
+
+        .hero {
+          padding-bottom: 36px;
+          margin-bottom: 40px;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .site-header__inner {
+          padding: 15px 20px;
+        }
+
+        .brand__context {
+          display: none;
+        }
+
+        .header-link span {
+          display: none;
+        }
+
+        .page {
+          padding: 36px 20px 56px;
+        }
+
+        .toc ol {
+          grid-template-columns: 1fr;
+        }
+
+        .toc {
+          padding: 18px;
+        }
+
+        .notice {
+          padding: 18px;
+        }
+
+        .policy section {
+          margin-bottom: 40px;
+        }
+
+        .policy h2 {
+          gap: 10px;
+        }
+
+        .contact-card {
+          padding: 20px;
+        }
+
+        .site-footer__inner {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+
+      /* ---------- Print ---------- */
+      @media print {
+        body {
+          background: #fff;
+          color: #111;
+          font-size: 11pt;
+        }
+
+        .site-header,
+        .toc,
+        .site-footer,
+        .skip-link {
+          display: none;
+        }
+
+        .page {
+          max-width: none;
+          padding: 0;
+        }
+
+        .hero {
+          border-bottom-color: #ccc;
+          margin-bottom: 24px;
+          padding-bottom: 20px;
+        }
+
+        .hero h1,
+        .hero__app,
+        .policy h2,
+        .policy h3,
+        .policy strong,
+        .contact-card__name {
+          color: #111;
+        }
+
+        .hero__summary,
+        .policy p,
+        .policy li,
+        .notice p {
+          color: #333;
+        }
+
+        .notice,
+        .contact-card,
+        .note {
+          background: #fff;
+          border-color: #ccc;
+          box-shadow: none;
+        }
+
+        .policy section {
+          break-inside: avoid;
+          margin-bottom: 22px;
+        }
+
+        .policy a {
+          color: #111;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#policy">Skip to policy</a>
+
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="brand" href="../../" aria-label="Mridul Pramod — back to portfolio">
+          MP<span class="brand__dot">.</span>
+          <span class="brand__context">/ legal</span>
+        </a>
+        <a class="header-link" href="../../" aria-label="Back to portfolio">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path
+              d="M19 12H5m0 0 6-6m-6 6 6 6"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <span>Back to portfolio</span>
+        </a>
+      </div>
+    </header>
+
+    <main class="page" id="policy">
+      <div class="hero">
+        <p class="eyebrow">legal · privacy</p>
+        <h1>Privacy Policy</h1>
+        <p class="hero__app">Skyward Airport Tycoon</p>
+        <p class="hero__summary">
+          This policy explains what information the Android game
+          <strong>Skyward Airport Tycoon</strong> stores on your device, what
+          information may be collected when advertising is introduced, and the
+          choices available to you.
+        </p>
+
+        <div class="meta" aria-label="Policy details">
+          <span class="meta__item"><span class="meta__dot"></span> Android</span>
+          <span class="meta__item">Developer: <strong>Mridul Pramod</strong></span>
+          <span class="meta__item">Effective: <strong>30 October 2026</strong></span>
+          <span class="meta__item">Version <strong>1.0</strong></span>
+        </div>
+      </div>
+
+      <div class="layout">
+        <aside class="toc" aria-label="On this page">
+          <p class="toc__title">On this page</p>
+          <ol>
+            <li><a href="#introduction"><span>01</span> Introduction</a></li>
+            <li><a href="#local-data"><span>02</span> Data stored on your device</a></li>
+            <li><a href="#advertising"><span>03</span> Advertising &amp; Google AdMob</a></li>
+            <li><a href="#use"><span>04</span> How information is used</a></li>
+            <li><a href="#sharing"><span>05</span> Third parties &amp; sharing</a></li>
+            <li><a href="#consent"><span>06</span> Ad personalisation &amp; consent</a></li>
+            <li><a href="#retention"><span>07</span> Retention &amp; deletion</a></li>
+            <li><a href="#children"><span>08</span> Children's privacy</a></li>
+            <li><a href="#security"><span>09</span> Security</a></li>
+            <li><a href="#changes"><span>10</span> Changes to this policy</a></li>
+            <li><a href="#contact"><span>11</span> Contact</a></li>
+          </ol>
+        </aside>
+
+        <article class="policy">
+          <div class="notice" role="note">
+            <span class="notice__label">Planned feature — not yet active</span>
+            <p>
+              <strong>Google AdMob is planned for monetisation but has not yet
+              been integrated into the game.</strong> As of the effective date,
+              Skyward Airport Tycoon does not display third-party advertising
+              and does not include an advertising SDK.
+            </p>
+            <p>
+              The advertising sections below describe the data that may be
+              processed once AdMob is integrated. This policy will be updated
+              before advertising goes live.
+            </p>
+          </div>
+
+          <section id="introduction">
+            <h2><span class="num">01</span> Introduction</h2>
+            <p>
+              Skyward Airport Tycoon (the “App”) is an Android game developed by
+              Mridul Pramod (the “Developer”, “we”, “us”, or “our”). This Privacy
+              Policy explains how the App handles information, including
+              information stored locally on your device and information that may
+              be collected by third-party advertising services when advertising
+              is introduced.
+            </p>
+            <p>
+              By installing or using the App, you acknowledge the practices
+              described in this policy. If you do not agree with this policy,
+              please do not use the App.
+            </p>
+            <p>
+              This policy applies only to Skyward Airport Tycoon and this
+              privacy page. It does not apply to third-party websites or
+              services that may be linked from the App or this page.
+            </p>
+          </section>
+
+          <section id="local-data">
+            <h2><span class="num">02</span> Information stored locally on your device</h2>
+            <p>
+              The App stores certain information locally on your Android device
+              so that the game can function and remember your progress. This may
+              include:
+            </p>
+            <ul>
+              <li>Game progress, such as unlocked content, upgrades, levels, and in-game achievements</li>
+              <li>Game settings and preferences, such as sound, music, and display options</li>
+              <li>Local gameplay state needed to resume a session</li>
+              <li>Technical information stored by the App on the device, such as the app version</li>
+            </ul>
+            <p>
+              This information is stored on your device and is not transmitted
+              to a server operated by the Developer. The App does not currently
+              provide user accounts, login, cloud saves, analytics, or payment
+              functionality.
+            </p>
+            <p>
+              You can remove locally stored information by clearing the App's
+              storage in your Android settings or by uninstalling the App.
+              Clearing storage or uninstalling may permanently delete your game
+              progress.
+            </p>
+          </section>
+
+          <section id="advertising">
+            <h2><span class="num">03</span> Advertising and Google AdMob</h2>
+            <p>
+              <strong>Current status:</strong> advertising is planned, but Google
+              AdMob has not yet been integrated into the App. The App does not
+              currently contain the Google Mobile Ads SDK and does not currently
+              show third-party ads.
+            </p>
+            <p>
+              When AdMob is integrated, the Google Mobile Ads SDK may collect and
+              share information automatically, as described in Google's privacy
+              documentation. This information may include:
+            </p>
+            <ul>
+              <li>Device identifiers, such as the Android advertising ID (Advertising ID) and app set ID</li>
+              <li>IP address, which may be used to infer an approximate, coarse location</li>
+              <li>Ad interactions, such as which ads were shown, viewed, or clicked</li>
+              <li>Diagnostic information, such as crash logs, performance data, and SDK error information</li>
+              <li>App and device information, such as app version, operating system version, device model, language, and network type</li>
+              <li>Other information collected by Google's advertising SDK as described in Google's privacy documentation</li>
+            </ul>
+            <p>
+              Google may use this information for purposes including delivering
+              ads, measuring ad performance, fraud prevention, and improving its
+              services. The exact data collected and purposes may change as
+              Google updates its SDK. For details, see
+              <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">How Google uses information from sites or apps that use our services</a>
+              and the
+              <a href="https://developers.google.com/admob/android/privacy" target="_blank" rel="noopener noreferrer">Google Mobile Ads SDK privacy disclosure</a>.
+            </p>
+            <div class="note">
+              <p>
+                <strong>Update note:</strong> when advertising is integrated,
+                this section will be revised to describe the actual SDK version,
+                the ads implemented, the consent tool used, and any additional
+                third-party ad partners.
+              </p>
+            </div>
+          </section>
+
+          <section id="use">
+            <h2><span class="num">04</span> How information is used</h2>
+            <p>Information is used only for the purposes described in this policy:</p>
+            <ul>
+              <li>To operate the game and save your progress and settings locally on your device</li>
+              <li>To display and measure advertising once AdMob is integrated</li>
+              <li>To prevent fraud, abuse, and invalid ad activity</li>
+              <li>To diagnose crashes, errors, and performance problems in the advertising SDK</li>
+              <li>To comply with legal obligations and enforce applicable terms</li>
+            </ul>
+            <p>
+              We do not currently use information for analytics, profiling, or
+              marketing beyond the advertising functionality described above.
+              If additional features are added, this policy will be updated
+              before they are used.
+            </p>
+          </section>
+
+          <section id="sharing">
+            <h2><span class="num">05</span> Third-party services and data sharing</h2>
+            <p>
+              When advertising is integrated, Google AdMob and its advertising
+              partners may receive information through the Google Mobile Ads SDK
+              as described in Section 3. Google acts as an independent third
+              party and processes information under its own privacy policy:
+              <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a>.
+            </p>
+            <p>
+              We do not sell your personal information. We do not currently
+              share locally stored game progress or settings with third parties,
+              because that information remains on your device.
+            </p>
+            <p>Information may also be disclosed only where necessary to:</p>
+            <ul>
+              <li>Comply with a legal obligation, court order, or lawful government request</li>
+              <li>Protect the rights, safety, and security of users, the Developer, or others</li>
+              <li>Investigate and prevent fraud or abuse</li>
+              <li>Work with service providers that process information on our behalf, subject to appropriate safeguards</li>
+            </ul>
+            <p>
+              Other than the planned AdMob integration, the App does not
+              currently use analytics providers, login providers, cloud storage,
+              or payment processors.
+            </p>
+          </section>
+
+          <section id="consent">
+            <h2><span class="num">06</span> Advertising personalisation and consent</h2>
+            <p>
+              Where required by applicable law, including in the European
+              Economic Area, the United Kingdom, and Switzerland, we will request
+              your consent before personal data is used for personalised
+              advertising. We intend to use a Google-compliant consent mechanism,
+              such as Google's User Messaging Platform (UMP) SDK, when AdMob is
+              integrated.
+            </p>
+            <p>
+              If you consent, ads may be personalised based on information such
+              as your advertising ID and approximate location. If you decline, or
+              where consent is not required, you may still see ads, but they may
+              be non-personalised. Non-personalised ads can still use limited
+              information for frequency capping, fraud prevention, and aggregate
+              measurement.
+            </p>
+            <p>
+              You can also control advertising personalisation through your
+              Android device settings, including resetting or deleting your
+              advertising ID and opting out of personalised ads where your device
+              supports it. If the App provides an in-app privacy or consent
+              setting after advertising is integrated, you can use that setting
+              to review or change your choices.
+            </p>
+            <p>
+              Depending on where you live, you may have additional rights to
+              access, correct, delete, or restrict the use of your personal
+              information, or to object to certain processing. You can contact us
+              using the details in Section 11. You can also contact Google
+              directly about data processed by its advertising services.
+            </p>
+          </section>
+
+          <section id="retention">
+            <h2><span class="num">07</span> Data retention and deletion</h2>
+            <p>
+              Information stored locally by the App remains on your device until
+              you clear the App's storage or uninstall the App. The Developer
+              does not maintain a server-side account or database containing your
+              game progress.
+            </p>
+            <p>
+              Information processed by Google AdMob is retained by Google
+              according to Google's own retention policies and settings. We do
+              not control how long Google retains that information. Please refer
+              to Google's privacy policy for details.
+            </p>
+            <p>
+              Because the App does not currently have user accounts or a
+              server-side profile, we may not be able to identify information
+              associated with you. If you contact us about deletion, please
+              include enough information for us to understand your request. We
+              will take reasonable steps to assist, including directing you to
+              the relevant Google controls where appropriate.
+            </p>
+          </section>
+
+          <section id="children">
+            <h2><span class="num">08</span> Children's privacy</h2>
+            <p>
+              Skyward Airport Tycoon is intended for a general audience and is
+              not directed to children under 13 (or the minimum age required in
+              your country). We do not knowingly collect personal information
+              from children.
+            </p>
+            <p>
+              If advertising is integrated, it will be configured in a manner
+              consistent with applicable child-directed advertising requirements
+              where the App is directed to children in a particular region. We
+              will update this policy and the App's store disclosures before any
+              such advertising is enabled.
+            </p>
+            <p>
+              If you are a parent or guardian and believe that a child has
+              provided personal information through the App, please contact us
+              at <a href="mailto:mridulpramod8@gmail.com">mridulpramod8@gmail.com</a>.
+              We will review the request and take reasonable steps to address it.
+            </p>
+          </section>
+
+          <section id="security">
+            <h2><span class="num">09</span> Security</h2>
+            <p>
+              We use reasonable technical and organisational measures to protect
+              information handled in connection with the App. Locally stored game
+              data is protected by your device's security, so you should keep
+              your device updated and use a screen lock.
+            </p>
+            <p>
+              No method of storage or transmission is completely secure. We
+              cannot guarantee absolute security, and you use the App at your own
+              risk. If you believe your information has been compromised, please
+              contact us using the details below.
+            </p>
+          </section>
+
+          <section id="changes">
+            <h2><span class="num">10</span> Changes to this Privacy Policy</h2>
+            <p>
+              We may update this policy to reflect changes to the App, new
+              features such as advertising, or legal requirements. The effective
+              date at the top of this page will be updated when changes are made.
+            </p>
+            <p>
+              For material changes, we will provide notice through the App's
+              store listing, an in-app notice, or another appropriate method
+              before the changes take effect. Your continued use of the App after
+              an update means you accept the revised policy.
+            </p>
+            <p>
+              You can always find the current version of this policy at this
+              page. We encourage you to review it periodically.
+            </p>
+          </section>
+
+          <section id="contact">
+            <h2><span class="num">11</span> Contact information</h2>
+            <p>
+              If you have questions about this Privacy Policy, the App's data
+              practices, or a privacy request, please contact the Developer:
+            </p>
+            <div class="contact-card">
+              <p class="contact-card__role">Developer</p>
+              <p class="contact-card__name">Mridul Pramod</p>
+              <a class="contact-card__email" href="mailto:mridulpramod8@gmail.com">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.7" />
+                  <path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                mridulpramod8@gmail.com
+              </a>
+            </div>
+            <p class="contact-card__note">
+              This policy applies to the Android game Skyward Airport Tycoon.
+              Postal address and telephone contact are not provided.
+            </p>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <span>© 2026 Mridul Pramod · Skyward Airport Tycoon</span>
+        <span>
+          <a href="#policy">Back to top</a>
+          &nbsp;·&nbsp;
+          <a href="../../">Portfolio</a>
+        </span>
+      </div>
+    </footer>
+  </body>
+</html>
