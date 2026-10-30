@@ -7,20 +7,27 @@
     <meta name="theme-color" content="#0a0c10" />
     <meta
       name="description"
-      content="Privacy Policy for Skyward Airport Tycoon, an Android game by Mridul Pramod. Learn what is stored on your device and how planned Google AdMob advertising will handle data."
+      content="Privacy Policy for Skyward Airport Tycoon, an Android game by Mridul Pramod. Learn what is stored on your device and how Google's Mobile Ads SDK will collect and share data when advertising is enabled, for advertising, analytics and fraud prevention."
     />
     <meta name="robots" content="index, follow" />
     <title>Privacy Policy — Skyward Airport Tycoon</title>
 
     <!--
       UPDATE CHECKLIST — when AdMob or another SDK is integrated:
-      1. Replace the "Planned feature — not yet active" notice.
+      1. Replace the "Pre-launch disclosure — ads not yet active" notice.
       2. Update Section 3 with the actual SDK/version, ad formats, and data collected.
       3. Update Section 5 with every third-party ad partner.
       4. Update Section 6 with the consent tool and opt-out controls actually used.
       5. Bump the effective date and version in the hero.
-      6. Re-check the Google Play Data safety form and store listing.
+      6. Update Google Play Console:
+         - App content > Ads declaration ("Contains ads")
+         - App content > Data safety (types, sharing, purposes, security)
+         - Privacy policy URL
+         - Content rating and target audience, if applicable
+      7. Re-check the Google Play Data safety form against the release build.
       Keep this file as the single source of truth for the live policy.
+      See docs/skyward-airport-tycoon-play-console-disclosures.md for the
+      Play Console answer sheet.
     -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -500,6 +507,70 @@
         margin: 0;
       }
 
+      .table-wrap {
+        margin: 18px 0 20px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius-sm);
+        overflow-x: auto;
+        background: var(--bg-elevated);
+      }
+
+      .data-table {
+        width: 100%;
+        min-width: 680px;
+        border-collapse: collapse;
+        font-size: 13px;
+        line-height: 1.55;
+        text-align: left;
+      }
+
+      .data-table caption {
+        padding: 12px 14px;
+        border-bottom: 1px solid var(--border);
+        font-family: var(--font-mono);
+        font-size: 10.5px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--text-tertiary);
+        text-align: left;
+      }
+
+      .data-table th,
+      .data-table td {
+        padding: 12px 14px;
+        vertical-align: top;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .data-table tr:last-child td {
+        border-bottom: none;
+      }
+
+      .data-table th {
+        font-family: var(--font-mono);
+        font-size: 10.5px;
+        font-weight: 500;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--text-tertiary);
+        background: var(--bg-elevated-2);
+        white-space: nowrap;
+      }
+
+      .data-table td {
+        color: var(--text-secondary);
+      }
+
+      .data-table td:first-child {
+        color: var(--text-primary);
+        font-weight: 500;
+        white-space: nowrap;
+      }
+
+      .data-table td:last-child {
+        color: var(--text-tertiary);
+      }
+
       .contact-card {
         margin-top: 22px;
         padding: 24px;
@@ -777,15 +848,15 @@
         <p class="hero__summary">
           This policy explains what information the Android game
           <strong>Skyward Airport Tycoon</strong> stores on your device, what
-          information may be collected when advertising is introduced, and the
-          choices available to you.
+          information Google's Mobile Ads SDK collects and shares when
+          advertising is enabled, and the choices available to you.
         </p>
 
         <div class="meta" aria-label="Policy details">
           <span class="meta__item"><span class="meta__dot"></span> Android</span>
           <span class="meta__item">Developer: <strong>Mridul Pramod</strong></span>
           <span class="meta__item">Effective: <strong>30 October 2026</strong></span>
-          <span class="meta__item">Version <strong>1.0</strong></span>
+          <span class="meta__item">Version <strong>1.1</strong></span>
         </div>
       </div>
 
@@ -798,7 +869,7 @@
             <li><a href="#advertising"><span>03</span> Advertising &amp; Google AdMob</a></li>
             <li><a href="#use"><span>04</span> How information is used</a></li>
             <li><a href="#sharing"><span>05</span> Third parties &amp; sharing</a></li>
-            <li><a href="#consent"><span>06</span> Ad personalisation &amp; consent</a></li>
+            <li><a href="#consent"><span>06</span> Ad personalisation &amp; choices</a></li>
             <li><a href="#retention"><span>07</span> Retention &amp; deletion</a></li>
             <li><a href="#children"><span>08</span> Children's privacy</a></li>
             <li><a href="#security"><span>09</span> Security</a></li>
@@ -809,17 +880,21 @@
 
         <article class="policy">
           <div class="notice" role="note">
-            <span class="notice__label">Planned feature — not yet active</span>
+            <span class="notice__label">Pre-launch disclosure — ads not yet active</span>
             <p>
-              <strong>Google AdMob is planned for monetisation but has not yet
-              been integrated into the game.</strong> As of the effective date,
-              Skyward Airport Tycoon does not display third-party advertising
-              and does not include an advertising SDK.
+              <strong>This policy has been updated in preparation for Google
+              AdMob, but advertising is not active yet.</strong> As of the
+              effective date, Skyward Airport Tycoon does not display
+              third-party advertising and does not contain the Google Mobile
+              Ads SDK.
             </p>
             <p>
-              The advertising sections below describe the data that may be
-              processed once AdMob is integrated. This policy will be updated
-              before advertising goes live.
+              The advertising sections below already describe the data that
+              Google's Mobile Ads SDK collects and shares automatically. This
+              lets the policy and the Google Play listing be reviewed before
+              ads are enabled. When advertising goes live, the SDK version, ad
+              formats, consent flow and Play Console declarations will be
+              checked again and this page updated if needed.
             </p>
           </div>
 
@@ -881,161 +956,320 @@
               show third-party ads.
             </p>
             <p>
-              When AdMob is integrated, the Google Mobile Ads SDK may collect and
-              share information automatically, as described in Google's privacy
-              documentation. This information may include:
+              Google's current Play data disclosure for the Google Mobile Ads SDK
+              states that the SDK automatically <strong>collects and shares</strong>
+              the following information for <strong>advertising, analytics, and
+              fraud prevention</strong>. When AdMob is integrated, these
+              practices will apply to the App unless a different configuration is
+              documented here.
             </p>
-            <ul>
-              <li>Device identifiers, such as the Android advertising ID (Advertising ID) and app set ID</li>
-              <li>IP address, which may be used to infer an approximate, coarse location</li>
-              <li>Ad interactions, such as which ads were shown, viewed, or clicked</li>
-              <li>Diagnostic information, such as crash logs, performance data, and SDK error information</li>
-              <li>App and device information, such as app version, operating system version, device model, language, and network type</li>
-              <li>Other information collected by Google's advertising SDK as described in Google's privacy documentation</li>
-            </ul>
+
+            <div class="table-wrap" role="region" aria-label="Google Mobile Ads SDK data categories" tabindex="0">
+              <table class="data-table">
+                <caption>Data collected and shared automatically by the SDK</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Data category</th>
+                    <th scope="col">What may be collected</th>
+                    <th scope="col">Purposes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>IP address and approximate location</td>
+                    <td>
+                      The device's IP address, which may be used to estimate the
+                      general location of the device.
+                    </td>
+                    <td>Advertising, analytics, fraud prevention</td>
+                  </tr>
+                  <tr>
+                    <td>Product interactions</td>
+                    <td>
+                      User product interactions and interaction information,
+                      including app launches, taps, and video views.
+                    </td>
+                    <td>Advertising, analytics, fraud prevention</td>
+                  </tr>
+                  <tr>
+                    <td>Diagnostics</td>
+                    <td>
+                      Information about the performance of the App and the SDK,
+                      including app launch time, hang rate, and energy usage.
+                    </td>
+                    <td>Advertising, analytics, fraud prevention</td>
+                  </tr>
+                  <tr>
+                    <td>Device and account identifiers</td>
+                    <td>
+                      The Android advertising ID, app set ID, and, if applicable,
+                      other identifiers related to signed-in accounts on the
+                      device.
+                    </td>
+                    <td>Advertising, analytics, fraud prevention</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
             <p>
-              Google may use this information for purposes including delivering
-              ads, measuring ad performance, fraud prevention, and improving its
-              services. The exact data collected and purposes may change as
-              Google updates its SDK. For details, see
-              <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">How Google uses information from sites or apps that use our services</a>
+              These collection and sharing activities are performed by Google's
+              advertising SDK, not by a server operated by the Developer. The
+              Developer does not receive this data into a developer-operated
+              backend, although Google may provide aggregated advertising and
+              performance reports. Google and its advertising partners may
+              process the information as independent third parties under their
+              own privacy policies.
+            </p>
+            <p>
+              According to Google, data collected by the Mobile Ads SDK is
+              encrypted in transit using Transport Layer Security (TLS). The
+              exact data collected and purposes may change as Google updates its
+              SDK or as ad formats and mediation partners are added.
+            </p>
+            <p>
+              For details, see
+              <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">How Google uses information from sites or apps that use our services</a>,
+              Google's
+              <a href="https://developers.google.com/admob/android/privacy/play-data-disclosure" target="_blank" rel="noopener noreferrer">Google Play data disclosure for the Mobile Ads SDK</a>,
               and the
-              <a href="https://developers.google.com/admob/android/privacy" target="_blank" rel="noopener noreferrer">Google Mobile Ads SDK privacy disclosure</a>.
+              <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>.
             </p>
             <div class="note">
               <p>
                 <strong>Update note:</strong> when advertising is integrated,
                 this section will be revised to describe the actual SDK version,
-                the ads implemented, the consent tool used, and any additional
-                third-party ad partners.
+                the ad formats implemented, the consent tool used, and any
+                additional third-party ad partners or mediation networks.
               </p>
             </div>
           </section>
 
           <section id="use">
             <h2><span class="num">04</span> How information is used</h2>
-            <p>Information is used only for the purposes described in this policy:</p>
+            <p>
+              The App uses local information to operate the game. When
+              advertising is enabled, the Google Mobile Ads SDK uses information
+              only for the purposes described below. The Developer and Google act
+              independently: the Developer controls the App and its local data,
+              while Google controls the data its SDK collects and shares.
+            </p>
+
+            <h3>Processing by the Developer</h3>
             <ul>
               <li>To operate the game and save your progress and settings locally on your device</li>
-              <li>To display and measure advertising once AdMob is integrated</li>
-              <li>To prevent fraud, abuse, and invalid ad activity</li>
-              <li>To diagnose crashes, errors, and performance problems in the advertising SDK</li>
+              <li>To respond to privacy questions and requests sent to the contact address</li>
               <li>To comply with legal obligations and enforce applicable terms</li>
             </ul>
+
+            <h3>Processing by Google through the Mobile Ads SDK</h3>
             <p>
-              We do not currently use information for analytics, profiling, or
-              marketing beyond the advertising functionality described above.
-              If additional features are added, this policy will be updated
-              before they are used.
+              When AdMob is integrated, Google states that the SDK collects and
+              shares information for the following purposes:
             </p>
+            <ul>
+              <li>
+                <strong>Advertising and marketing</strong> — to serve, cap,
+                measure and improve ads, including personalised ads where
+                consent allows
+              </li>
+              <li>
+                <strong>Analytics</strong> — to understand App and SDK
+                performance, including app launches, taps, video views, launch
+                time, hang rate and energy usage
+              </li>
+              <li>
+                <strong>Fraud prevention, security and compliance</strong> — to
+                detect invalid traffic, abuse and security issues
+              </li>
+            </ul>
+            <p>
+              The Developer does not receive the SDK's raw data into a
+              developer-operated backend. Google may provide aggregated reports
+              about ad performance and revenue.
+            </p>
+            <div class="note">
+              <p>
+                <strong>Current status:</strong> because the App does not yet
+                contain the SDK, none of the Google processing described above is
+                occurring in the App today. These purposes apply once advertising
+                is enabled.
+              </p>
+            </div>
           </section>
 
           <section id="sharing">
             <h2><span class="num">05</span> Third-party services and data sharing</h2>
             <p>
-              When advertising is integrated, Google AdMob and its advertising
-              partners may receive information through the Google Mobile Ads SDK
-              as described in Section 3. Google acts as an independent third
-              party and processes information under its own privacy policy:
+              <strong>Collected and shared with Google.</strong> When advertising
+              is enabled, the Google Mobile Ads SDK automatically collects the
+              information described in Section 3 and shares it with Google and its
+              advertising partners for advertising, analytics and fraud
+              prevention. Google acts as an independent third party and processes
+              that information under its own privacy policy:
               <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a>.
             </p>
             <p>
-              We do not sell your personal information. We do not currently
-              share locally stored game progress or settings with third parties,
-              because that information remains on your device.
+              The categories shared through the SDK can include IP address and
+              approximate location, product interactions, diagnostics, and device
+              or account identifiers such as the Android advertising ID and app
+              set ID. Google may share this information with advertisers,
+              measurement providers and other partners involved in delivering and
+              measuring ads. See Google's
+              <a href="https://developers.google.com/admob/android/privacy/play-data-disclosure" target="_blank" rel="noopener noreferrer">Google Play data disclosure for the Mobile Ads SDK</a>
+              and
+              <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">How Google uses information from sites or apps that use our services</a>.
+            </p>
+            <p>
+              The Developer does not sell personal information for money and does
+              not operate a server that receives your game progress. Locally stored
+              progress and settings stay on your device and are not shared with
+              third parties by the Developer. The SDK sharing described above is
+              performed by Google, not by the Developer. Some US state laws may
+              treat sharing for personalised advertising as “sharing” or a “sale”;
+              you can opt out as described in Section 6.
             </p>
             <p>Information may also be disclosed only where necessary to:</p>
             <ul>
               <li>Comply with a legal obligation, court order, or lawful government request</li>
               <li>Protect the rights, safety, and security of users, the Developer, or others</li>
               <li>Investigate and prevent fraud or abuse</li>
-              <li>Work with service providers that process information on our behalf, subject to appropriate safeguards</li>
+              <li>Work with service providers that process information on the Developer's behalf, subject to appropriate safeguards</li>
             </ul>
             <p>
-              Other than the planned AdMob integration, the App does not
-              currently use analytics providers, login providers, cloud storage,
-              or payment processors.
+              Other than Google AdMob and the Google Mobile Ads SDK, the App does
+              not use analytics providers, login providers, cloud storage, or
+              payment processors. If additional services or mediation partners are
+              added, this section will be updated before they are used.
             </p>
           </section>
 
           <section id="consent">
-            <h2><span class="num">06</span> Advertising personalisation and consent</h2>
+            <h2><span class="num">06</span> Advertising personalisation, consent and your choices</h2>
             <p>
-              Where required by applicable law, including in the European
-              Economic Area, the United Kingdom, and Switzerland, we will request
-              your consent before personal data is used for personalised
-              advertising. We intend to use a Google-compliant consent mechanism,
-              such as Google's User Messaging Platform (UMP) SDK, when AdMob is
-              integrated.
+              Where required by law, including in the European Economic Area, the
+              United Kingdom and Switzerland, the App will request your consent
+              before personal data is used for personalised advertising. When
+              AdMob is integrated, the App intends to use a Google-compliant
+              consent mechanism, such as Google's User Messaging Platform (UMP)
+              SDK, and will honour the choices you make.
             </p>
             <p>
-              If you consent, ads may be personalised based on information such
-              as your advertising ID and approximate location. If you decline, or
-              where consent is not required, you may still see ads, but they may
-              be non-personalised. Non-personalised ads can still use limited
-              information for frequency capping, fraud prevention, and aggregate
-              measurement.
+              If you consent, ads may be personalised using information such as
+              your advertising ID, approximate location and product interactions.
+              If you decline, or where consent is not required, you may still see
+              ads, but they should be non-personalised. Non-personalised ads can
+              still use limited information for frequency capping, fraud
+              prevention, and aggregate measurement.
+            </p>
+
+            <h3>Controls available to you</h3>
+            <ul>
+              <li>
+                <strong>In-app consent or privacy settings</strong> — where the
+                App offers a privacy or consent option, you can use it to review
+                or change your advertising choices.
+              </li>
+              <li>
+                <strong>Google Ads Settings</strong> — you can manage
+                personalisation and opt out of personalised Google ads at
+                <a href="https://adssettings.google.com/" target="_blank" rel="noopener noreferrer">adssettings.google.com</a>.
+              </li>
+              <li>
+                <strong>Android advertising ID</strong> — in your device settings,
+                you can reset your advertising ID or delete it where your Android
+                version supports that control. Deleting the ID limits its use for
+                advertising.
+              </li>
+              <li>
+                <strong>Device ad settings</strong> — you can opt out of
+                personalised advertising in your device's Google settings where
+                that option is available.
+              </li>
+            </ul>
+
+            <p>
+              <strong>EEA, UK and Switzerland:</strong> you can withdraw or change
+              consent at any time using the in-app privacy option or the controls
+              above. Withdrawing consent does not affect processing that already
+              took place before withdrawal.
             </p>
             <p>
-              You can also control advertising personalisation through your
-              Android device settings, including resetting or deleting your
-              advertising ID and opting out of personalised ads where your device
-              supports it. If the App provides an in-app privacy or consent
-              setting after advertising is integrated, you can use that setting
-              to review or change your choices.
+              <strong>United States:</strong> if you live in a state with an
+              applicable privacy law, you may have the right to opt out of the
+              sharing of your information for personalised advertising. You can
+              exercise that choice through the in-app privacy controls where
+              offered, through Google Ads Settings, and by using your device's
+              advertising ID controls.
             </p>
             <p>
-              Depending on where you live, you may have additional rights to
-              access, correct, delete, or restrict the use of your personal
-              information, or to object to certain processing. You can contact us
-              using the details in Section 11. You can also contact Google
-              directly about data processed by its advertising services.
+              Depending on where you live, you may also have rights to access,
+              correct, delete or restrict the use of your personal information, or
+              to object to certain processing. You can contact the Developer using
+              the details in Section 11. For information processed by Google's
+              advertising services, you can also contact Google directly.
             </p>
           </section>
 
           <section id="retention">
             <h2><span class="num">07</span> Data retention and deletion</h2>
             <p>
-              Information stored locally by the App remains on your device until
-              you clear the App's storage or uninstall the App. The Developer
-              does not maintain a server-side account or database containing your
-              game progress.
+              <strong>Local data.</strong> Information stored locally by the App
+              remains on your device until you clear the App's storage or
+              uninstall the App. You can delete it at any time using your Android
+              settings (for example, Settings → Apps → Skyward Airport Tycoon →
+              Storage → Clear storage) or by uninstalling the App.
             </p>
             <p>
-              Information processed by Google AdMob is retained by Google
-              according to Google's own retention policies and settings. We do
-              not control how long Google retains that information. Please refer
-              to Google's privacy policy for details.
+              <strong>No developer account or server database.</strong> The App
+              does not create user accounts and the Developer does not maintain a
+              server-side profile or database containing your game progress. There
+              is therefore no developer-held account to delete.
             </p>
             <p>
-              Because the App does not currently have user accounts or a
-              server-side profile, we may not be able to identify information
-              associated with you. If you contact us about deletion, please
-              include enough information for us to understand your request. We
-              will take reasonable steps to assist, including directing you to
-              the relevant Google controls where appropriate.
+              <strong>Advertising data.</strong> Information collected and shared
+              by the Google Mobile Ads SDK is retained by Google according to
+              Google's own retention policies and your Google account and device
+              settings. The Developer does not control how long Google retains
+              that information. See the
+              <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>
+              for details.
+            </p>
+            <p>
+              <strong>Deletion requests.</strong> Because the Developer does not
+              hold a server-side profile, a deletion request will usually relate
+              to local data you can remove yourself or to data held by Google. If
+              you contact us about deletion, please describe your request. We will
+              take reasonable steps to assist, including confirming what the
+              Developer holds and directing you to the relevant Google controls
+              where appropriate. You can also use Google's privacy controls and
+              the advertising ID controls described in Section 6.
             </p>
           </section>
 
           <section id="children">
             <h2><span class="num">08</span> Children's privacy</h2>
             <p>
-              Skyward Airport Tycoon is intended for a general audience and is
-              not directed to children under 13 (or the minimum age required in
-              your country). We do not knowingly collect personal information
-              from children.
+              Skyward Airport Tycoon is intended for a general audience and is not
+              primarily directed to children under 13 (or the minimum age required
+              in your country). The Developer does not knowingly collect personal
+              information from children.
             </p>
             <p>
-              If advertising is integrated, it will be configured in a manner
-              consistent with applicable child-directed advertising requirements
-              where the App is directed to children in a particular region. We
-              will update this policy and the App's store disclosures before any
-              such advertising is enabled.
+              If advertising is enabled, it will be configured consistently with
+              applicable child-directed advertising requirements. If the App is
+              listed for a child audience or otherwise treated as child-directed,
+              the advertising SDK will be configured for child-directed treatment,
+              personalised advertising will be disabled, and ad content will be
+              limited to an appropriate rating. The Developer will also keep the
+              Google Play target audience and content settings, the ads
+              declaration and the Data safety section consistent with that
+              configuration.
             </p>
             <p>
               If you are a parent or guardian and believe that a child has
-              provided personal information through the App, please contact us
-              at <a href="mailto:mridulpramod8@gmail.com">mridulpramod8@gmail.com</a>.
+              provided personal information through the App, please contact us at
+              <a href="mailto:mridulpramod8@gmail.com">mridulpramod8@gmail.com</a>.
               We will review the request and take reasonable steps to address it.
             </p>
           </section>
@@ -1043,35 +1277,53 @@
           <section id="security">
             <h2><span class="num">09</span> Security</h2>
             <p>
-              We use reasonable technical and organisational measures to protect
-              information handled in connection with the App. Locally stored game
-              data is protected by your device's security, so you should keep
-              your device updated and use a screen lock.
+              The Developer uses reasonable technical and organisational measures
+              to protect information handled in connection with the App. Locally
+              stored game data is protected by your device's security, so you
+              should keep your device updated and use a screen lock.
             </p>
             <p>
-              No method of storage or transmission is completely secure. We
-              cannot guarantee absolute security, and you use the App at your own
-              risk. If you believe your information has been compromised, please
-              contact us using the details below.
+              According to Google, information collected by the Google Mobile Ads
+              SDK is encrypted in transit using Transport Layer Security (TLS).
+              The Developer does not operate the servers that receive SDK data and
+              cannot control Google's security measures beyond relying on Google's
+              published practices.
+            </p>
+            <p>
+              No method of storage or transmission is completely secure. The
+              Developer cannot guarantee absolute security, and you use the App at
+              your own risk. If you believe your information has been compromised,
+              please contact us using the details in Section 11.
             </p>
           </section>
 
           <section id="changes">
             <h2><span class="num">10</span> Changes to this Privacy Policy</h2>
             <p>
-              We may update this policy to reflect changes to the App, new
-              features such as advertising, or legal requirements. The effective
-              date at the top of this page will be updated when changes are made.
+              The Developer may update this policy to reflect changes to the App,
+              new features such as advertising, changes in the Google Mobile Ads
+              SDK or its data practices, or legal requirements. The effective date
+              and version number at the top of this page will be updated when
+              changes are made.
             </p>
             <p>
-              For material changes, we will provide notice through the App's
-              store listing, an in-app notice, or another appropriate method
+              When advertising is enabled, or when the SDK configuration, ad
+              formats, consent flow or third-party partners change, this policy
+              and the Google Play declarations will be reviewed together. The Play
+              Console ads declaration and Data safety answers will be kept
+              consistent with the release build. This includes the data types,
+              whether data is collected and shared, the stated purposes, and the
+              security and deletion information.
+            </p>
+            <p>
+              For material changes, the Developer will provide notice through the
+              App's store listing, an in-app notice, or another appropriate method
               before the changes take effect. Your continued use of the App after
               an update means you accept the revised policy.
             </p>
             <p>
-              You can always find the current version of this policy at this
-              page. We encourage you to review it periodically.
+              You can always find the current version of this policy at this page.
+              The Developer encourages you to review it periodically.
             </p>
           </section>
 
